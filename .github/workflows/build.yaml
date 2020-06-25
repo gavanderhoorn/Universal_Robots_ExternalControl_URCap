@@ -1,4 +1,4 @@
-name: Industrial CI pipeline
+name: Build URCap
 on: [push]
 
 jobs:
@@ -7,8 +7,7 @@ jobs:
     strategy:
       matrix:
         env:
-          - ROS_DISTRO: kinetic
-            UPSTREAM_WORKSPACE: .ci.rosinstall
+          - SDK_VERSION: 1.6.1
 
     steps:
       - uses: actions/checkout@v1
